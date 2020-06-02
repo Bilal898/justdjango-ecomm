@@ -25,6 +25,9 @@ class Item(models.Model):
     slug = models.SlugField()
     description = models.TextField()
 
+    class Meta:
+        ordering = ['title']
+
     def __str__(self):
         return self.title
 
